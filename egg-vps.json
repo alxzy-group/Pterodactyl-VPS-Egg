@@ -23,7 +23,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\n\r\ncd \/mnt\/server\/",
-            "container": "ghcr.io\/alxzy-group\/pterodactyl-vps-egg:latest",
+            "container": "ghcr.io\/pterodactyl\/installers:alpine",
             "entrypoint": "bash"
         }
     },
