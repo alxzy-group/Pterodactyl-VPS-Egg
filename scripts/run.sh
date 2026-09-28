@@ -516,7 +516,7 @@ install_ssh() {
     arch=$(detect_architecture)
     
     # URL to download the SSH binary
-    url="https://github.com/alxzy-group/ssh/releases/latest/download/ssh-$arch"
+    url="https://github.com/ysdragon/ssh/releases/latest/download/ssh-$arch"
     
     # Download the SSH binary
     wget -q -O /usr/local/bin/ssh "$url" || {

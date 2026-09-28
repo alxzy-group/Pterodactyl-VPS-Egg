@@ -21,7 +21,7 @@ RUN apk update && \
 # Install PRoot
 RUN ARCH=$(uname -m) && \
     mkdir -p /usr/local/bin && \
-    proot_url="https://github.com/alxzy-group/proot-static/releases/download/v${PROOT_VERSION}/proot-${ARCH}-static" && \
+    proot_url="https://github.com/ysdragon/proot-static/releases/download/v${PROOT_VERSION}/proot-${ARCH}-static" && \
     curl -Ls "$proot_url" -o /usr/local/bin/proot && \
     chmod 755 /usr/local/bin/proot
 
