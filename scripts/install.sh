@@ -6,7 +6,6 @@
 # Configuration variables
 ROOTFS_DIR="/home/container"
 BASE_URL="https://images.linuxcontainers.org/images"
-DISTRO_MAP_URL="https://distromap.alxzy-group.tech"
 
 # Add to PATH
 export PATH="$PATH:~/.local/usr/bin"
@@ -65,19 +64,29 @@ cleanup() {
     rm -rf /tmp/sbin
 }
 
-# Function to get version label from distromap
+# Function to get version label locally
 get_label() {
     local distro="$1"
     local version="$2"
-    local response
-    response=$(curl -s "$DISTRO_MAP_URL/distro/$distro/$version")
-    if ! echo "$response" | jq -e . >/dev/null 2>&1; then
-        echo "$version"
-    elif echo "$response" | jq -e '.error' >/dev/null 2>&1; then
-        echo "$version"
-    else
-        echo "$response" | jq -r '.label' 2>/dev/null || echo "$version"
-    fi
+    
+    case "$version" in
+        # Ubuntu
+        noble) echo "24.04 LTS (Noble)" ;;
+        jammy) echo "22.04 LTS (Jammy)" ;;
+        focal) echo "20.04 LTS (Focal)" ;;
+        bionic) echo "18.04 LTS (Bionic)" ;;
+        # Debian
+        bookworm) echo "12 (Bookworm)" ;;
+        bullseye) echo "11 (Bullseye)" ;;
+        buster) echo "10 (Buster)" ;;
+        # Alpine
+        edge) echo "Edge (Rolling)" ;;
+        # RHEL / CentOS / Alma / Rocky
+        9-stream) echo "9 Stream" ;;
+        8-stream) echo "8 Stream" ;;
+        # Default
+        *) echo "$version" ;;
+    esac
 }
 
 # Function to install a specific distro
