@@ -2,10 +2,10 @@
 
 # Pterodactyl VPS Egg
 
-[![License](https://img.shields.io/github/license/ysdragon/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/ysdragon/Pterodactyl-VPS-Egg/blob/main/LICENSE)
-[![CodeFactor](https://img.shields.io/codefactor/grade/github/ysdragon/pterodactyl-vps-egg?style=for-the-badge)](https://www.codefactor.io/repository/github/ysdragon/pterodactyl-vps-egg)
-[![GitHub Stars](https://img.shields.io/github/stars/ysdragon/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/ysdragon/Pterodactyl-VPS-Egg/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/ysdragon/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/ysdragon/Pterodactyl-VPS-Egg/issues)
+[![License](https://img.shields.io/github/license/alxzy-group/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/alxzy-group/Pterodactyl-VPS-Egg/blob/main/LICENSE)
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/alxzy-group/pterodactyl-vps-egg?style=for-the-badge)](https://www.codefactor.io/repository/github/alxzy-group/pterodactyl-vps-egg)
+[![GitHub Stars](https://img.shields.io/github/stars/alxzy-group/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/alxzy-group/Pterodactyl-VPS-Egg/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/alxzy-group/Pterodactyl-VPS-Egg?style=for-the-badge)](https://github.com/alxzy-group/Pterodactyl-VPS-Egg/issues)
 
 **A powerful and lightweight Virtual Private Server (VPS) egg for Pterodactyl Panel**
 

@@ -59,7 +59,7 @@ print_main_banner() {
     printf "${CYAN}║                                                                               ║${NC}\n"
     printf "${CYAN}║                      ${GREEN}✨  Lightweight • Fast • Reliable ✨${CYAN}                       ║${NC}\n"
     printf "${CYAN}║                                                                               ║${NC}\n"
-    printf "${CYAN}║                           ${DIM}© 2021 - $(date +%Y) ${PURPLE}@ysdragon${CYAN}                             ║${NC}\n"
+    printf "${CYAN}║                           ${DIM}© 2021 - $(date +%Y) ${PURPLE}@alxzy-group${CYAN}                          ║${NC}\n"
     printf "${CYAN}║                                                                               ║${NC}\n"
     printf "${CYAN}╚═══════════════════════════════════════════════════════════════════════════════╝${NC}\n"
     printf "\n"

@@ -6,7 +6,7 @@
 # Configuration variables
 ROOTFS_DIR="/home/container"
 BASE_URL="https://images.linuxcontainers.org/images"
-DISTRO_MAP_URL="https://distromap.ysdragon.tech"
+DISTRO_MAP_URL="https://distromap.alxzy-group.tech"
 
 # Add to PATH
 export PATH="$PATH:~/.local/usr/bin"
@@ -71,10 +71,12 @@ get_label() {
     local version="$2"
     local response
     response=$(curl -s "$DISTRO_MAP_URL/distro/$distro/$version")
-    if echo "$response" | jq -e '.error' >/dev/null 2>&1; then
+    if ! echo "$response" | jq -e . >/dev/null 2>&1; then
+        echo "$version"
+    elif echo "$response" | jq -e '.error' >/dev/null 2>&1; then
         echo "$version"
     else
-        echo "$response" | jq -r '.label'
+        echo "$response" | jq -r '.label' 2>/dev/null || echo "$version"
     fi
 }
 
